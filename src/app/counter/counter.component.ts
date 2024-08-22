@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class CounterComponent {
   count$: Observable<number>;
-  inputValue: number = 0;
+  inputValue!: number;
 
   constructor(private store: Store) {
     this.count$ = this.store.select(selectCounterState);
